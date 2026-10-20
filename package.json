@@ -1,0 +1,8 @@
+{
+  "name": "escala-turnos",
+  "version": "1.0.0",
+  "description": "Escala de turnos 24/7 com cobertura mínima, férias e edição de pessoas, equipas e turnos",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=18" },
+  "license": "UNLICENSED"
+}

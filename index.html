@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Escala de Turnos 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header>
+  <div>
+    <h1>Escala de Turnos 2026</h1>
+    <div class="sub" id="sum"></div>
+  </div>
+  <div class="bar">
+    <div class="tabs" id="tabs" role="group" aria-label="Trimestre"></div>
+    <button id="th" title="Alternar tema">Tema</button>
+    <button id="ex">Exportar CSV</button>
+    <label class="btn">Importar CSV<input type="file" id="im" accept=".csv" hidden></label>
+    <button id="rs">Repor escala original</button>
+  </div>
+</header>
+<main>
+  <section>
+    <h2>Pincel</h2>
+    <div class="palette" id="pal" role="group" aria-label="Código a aplicar"></div>
+    <p class="note">Escolha um código e clique nas células da grelha para o aplicar. As alterações ficam guardadas neste navegador.</p>
+  </section>
+  <section>
+    <h2 id="gt">Grelha</h2>
+    <div class="wrap"><table id="grid"></table></div>
+    <p class="note">Células a vermelho na cobertura estão abaixo do mínimo de serviço. Fins de semana a cinzento, feriados a rosa.</p>
+  </section>
+  <div class="grid2">
+    <section><h2 id="at">Alertas de cobertura</h2><ul class="al" id="al"></ul></section>
+    <section><h2>Férias</h2><div class="wrap" style="max-height:260px;overflow:auto"><table class="v" id="vac"></table></div></section>
+  </div>
+  <section class="cfg"><h2>Configuração</h2>
+  <details id="dp"><summary>Pessoas e equipas</summary><div id="cp"></div></details>
+  <details id="dt"><summary>Turnos, cores e mínimos de serviço</summary><div id="ct"></div></details>
+</section>
+  <section><h2>Legenda</h2><div class="leg" id="leg"></div></section>
+</main>
+<script src="js/seed.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
